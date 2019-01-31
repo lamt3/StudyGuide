@@ -203,6 +203,7 @@ public class ArrayAlgorithms {
 //			System.out.println(i);
 //		}
 		
+		
 		int[] arr = new int[]{-1, 1, -3, -12, -3, -7, -27};
 		ArrayAlgorithms.reArrangePositivesNegatives(arr);
 		for(int i : arr){

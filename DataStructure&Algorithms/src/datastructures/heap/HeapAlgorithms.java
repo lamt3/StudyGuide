@@ -1,4 +1,4 @@
-package datastructres.heap;
+package datastructures.heap;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -48,11 +48,7 @@ public class HeapAlgorithms {
 		
 		
 	}
-	
-	public boolean equals(Object obj) {
-		return "abc" == (String)obj;
-	}
-	
+
 	public static void main(String[] args) {
 //		int arr[] = {3, 5, 9, 6, 8, 20, 10, 12, 18, 9}; 
 //        int n = arr.length; 
@@ -61,31 +57,6 @@ public class HeapAlgorithms {
 //        
 //        System.out.println(arr);
 		
-		
-		AtomicInteger a = new AtomicInteger(0);
-		a.get();
-		
-		List<Integer> i = new LinkedList<Integer>();
-		i.add(0);
-		i.add(1);
-		i.add(1);
-		i.add(1);
-		
-		List<Integer> c = new LinkedList<Integer>();
-		List<Integer> d = new LinkedList<Integer>();
-		
-		i.parallelStream().forEach(e ->{
-			if(e == 0) {
-				c.add(e);
-			}else {
-				d.add(e);
-			}
-			a.addAndGet(e);
-		});
-		
-		System.out.println(c.size());
-		System.out.println(d.size());
-		System.out.println(a.get());
 		
 
 		

@@ -1,4 +1,4 @@
-package datastuctures.trees;
+package datastructures.trees;
 
 import java.util.HashSet;
 import java.util.LinkedList;

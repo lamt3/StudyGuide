@@ -110,7 +110,7 @@ public class StringAlgorithmsPractice {
 				maxLength = charToPosition.size();
 				longestSubString = charToPosition.keySet().toString();
 			}
-			
+		
 			
 			
 		}

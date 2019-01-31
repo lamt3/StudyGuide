@@ -1,4 +1,4 @@
-package datastructres.heap;
+package datastructures.heap;
 
 public class TomHeap {
 

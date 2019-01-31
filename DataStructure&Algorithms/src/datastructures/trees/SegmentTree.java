@@ -1,4 +1,4 @@
-package datastuctures.trees;
+package datastructures.trees;
 
 public class SegmentTree {
 	public static class STNode {
