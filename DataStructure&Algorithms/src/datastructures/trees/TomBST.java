@@ -1,8 +1,11 @@
 package datastructures.trees;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -319,6 +322,7 @@ public class TomBST {
 			}
 		}
 		return treeValues;
+		
 	}
 	
 	
@@ -483,11 +487,13 @@ public class TomBST {
 	}
 	
 	public static void main(String[] args) {
-		TomBST c = new TomBST(5);
-		c.head.left = new TomTreeNode(2);
-		c.head.right = new TomTreeNode(19);
+//		TomBST c = new TomBST(5);
+//		c.head.left = new TomTreeNode(2);
+//		c.head.right = new TomTreeNode(19);
+//		
+//		c.insertNonRec(6);
+		System.out.println(5/2);
 		
-		c.insertNonRec(6);
 		
 	}
 	

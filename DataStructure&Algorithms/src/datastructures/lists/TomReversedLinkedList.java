@@ -55,6 +55,8 @@ public class TomReversedLinkedList {
 		curr.next = null;
 	}
 	
+	
+	
 	public static void main(String[] args){
 		TomReversedLinkedList rll = new TomReversedLinkedList();
 		rll.createLinkedList(5);

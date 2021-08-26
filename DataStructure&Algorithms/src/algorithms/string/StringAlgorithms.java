@@ -212,10 +212,10 @@ public class StringAlgorithms {
 	
 	
 	public static void main(String[] args){
-		System.out.println(StringAlgorithms.findLongestNonRepeatingCharacters("ABCDABDEFGCAGDBD"));
+//		System.out.println(StringAlgorithms.findLongestNonRepeatingCharacters("ABCDABDEFGCAGDBD"));
 //		System.out.println(StringAlgorithms.reverseWords("doggy"));
 //		System.out.println(StringAlgorithms.findLongestPalindrome("moom"));
-//		Set<String> a = StringAlgorithms.findAllPermutations("abcd");
+		Set<String> a = StringAlgorithms.findAllPermutations("abcd");
 //		for (String b: a){
 //			System.out.println(b);
 //		}

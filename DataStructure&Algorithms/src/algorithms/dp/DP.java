@@ -316,7 +316,7 @@ public class DP {
 		Arrays.fill(maxChange, 0);
 		// Base case (If given value is 0) 
 		maxChange[0]=1;
-		for (int i =0; i <= m; i++) {
+		for (int i =0; i < m; i++) {
 			// 2nd for loop checking to make sure coins[i] is NOT LARGER than inputCoin --> if larger don't put into array maxChange since can't make change out of it. 
 			for (int j = coins[i]; j <= inputCoin; j++) {
 				maxChange[j] = maxChange[j] + maxChange[j-coins[i]];   
@@ -477,14 +477,14 @@ public class DP {
 		// System.out.print(getMaxGold(gold, m, n));
 
 		// 8. Coin Change
-//		int arr[] = { 10, 2, 3 };
-//		int m = arr.length;
-//		int n = 20;
-//		System.out.println(countChange(arr, m, n));
+		int arr[] = { 1,2 };
+		int m = arr.length;
+		int n = 4;
+		System.out.println(countChange(arr, m, n));
 		
 		
 		
-		//9. Find Partition
+//		9. Find Partition
 //		https://www.techiedelight.com/partition-problem/
 //		int arr[] = { 1, 2, 3 };
 //		int n = arr.length;
@@ -505,11 +505,14 @@ public class DP {
 //		System.out.println("Length of LCS is" + " " + DP.lcs(X, Y, m, n));
 		
 		//11.cutRod
-		int arr[] = new int[] {3, 5, 8, 9, 10, 17, 17, 20}; 
-        int size = arr.length; 
-        System.out.println("Maximum Obtainable Value is " + 
-                            cutRod(arr, size)); 
+//		int arr[] = new int[] {3, 5, 8, 9, 10, 17, 17, 20}; 
+//        int size = arr.length; 
+//        System.out.println("Maximum Obtainable Value is " + 
+//                            cutRod(arr, size)); 
+//		System.out.println(2%5);
 	      
 		
 	}
+	
+
 }

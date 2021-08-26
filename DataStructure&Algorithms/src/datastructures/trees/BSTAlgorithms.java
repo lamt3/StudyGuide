@@ -1,7 +1,8 @@
 package datastructures.trees;
 
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class BSTAlgorithms {
 
@@ -83,6 +84,101 @@ public class BSTAlgorithms {
 		
 		
 		
+	}
+	
+	
+	public static void reverseAlternateLvels(TomTreeNode node) {
+		
+		
+		Queue<TomTreeNode> qL = new LinkedList<TomTreeNode>(); 
+		Stack<TomTreeNode> sR = new Stack<TomTreeNode>();
+		
+		qL.add(node);
+		sR.push(node);
+		int width = 0;
+		boolean isInvert = true; 
+		
+		while(!qL.isEmpty()) {
+			width = qL.size();
+			
+			while(width-->0) {
+				
+				TomTreeNode currL = qL.poll();
+				TomTreeNode currR = sR.pop();
+				
+				System.out.println("current Left : " + currL.data);
+				System.out.println("current Right : " + currR.data);
+				
+				if(isInvert) {
+					
+					currL.left = new TomTreeNode(currR.right.data);
+					currL.right=new TomTreeNode(currR.left.data);
+					
+					if(currR.left != null) {
+						qL.add(currL.left);
+						sR.push(currL.left);
+					}
+					if(currR.right != null) {
+						qL.add(currL.right);
+						sR.push(currL.right);	
+					}
+				}
+					
+				else {
+					
+					currL.left=new TomTreeNode(currR.left.data);
+					currL.right= new TomTreeNode(currR.right.data);
+					if(currR.left != null) {
+						qL.add(currL.left);
+						sR.push(currL.left);
+					}
+					if(currR.right != null) {
+						qL.add(currL.right);
+						sR.push(currL.right);	
+					}
+				
+					
+				}
+				
+				
+			}
+			isInvert = isInvert==false? true:false;
+			
+			
+			
+		}
+		
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		TomTreeNode node = new TomTreeNode(0);
+		node.left=new TomTreeNode(1);
+		node.right = new TomTreeNode(2);
+		
+		node.left.left = new TomTreeNode(3);
+		node.left.right = new TomTreeNode(4);
+		
+		node.right.left = new TomTreeNode(5);
+		node.right.right = new TomTreeNode(6);
+		
+		node.left.left.left= new TomTreeNode(7);
+		node.left.left.right = new TomTreeNode(8);
+		
+		node.left.right.left= new TomTreeNode(9);
+		node.left.right.right = new TomTreeNode(10);
+		
+		node.right.left.left = new TomTreeNode(11);
+		node.right.left.right = new TomTreeNode(12);
+		
+		node.right.right.left = new TomTreeNode(13);
+		node.right.right.right = new TomTreeNode(14);
+		
+		BSTAlgorithms.reverseAlternateLvels(node);
+		System.out.println(node);
 	}
 
 }
